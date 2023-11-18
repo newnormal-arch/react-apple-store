@@ -1,0 +1,58 @@
+.productDetailsCard{
+    margin-left: 100px;
+}
+
+.productDetailsTopSection{
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.productDetailsTopSection img{
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 20px 0;
+    margin-top: 10px;
+    width: 30%;
+}
+
+.productDetailsTopDescription{
+    margin-left: 30px;
+    width: 40%;
+}
+
+.productDetailsTopDescription h5{
+    font-size: 61px;
+    margin: 20px 0;
+}
+
+.productDetailsModel, .productDetailsPrice{
+    font-size: 31px;
+    margin: 20px 0;
+}
+
+.productDetailsRating, .productDetailsDescription{
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.productDetailsBottomSection{
+    border-top: #000 1px solid;
+    width: 70%;
+}
+
+.productDetailsDescriptionTitle{
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.bag-btn{
+    height: 40px;
+    width: 159px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    padding: 8px 24px;
+}
+

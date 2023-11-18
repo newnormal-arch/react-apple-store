@@ -5,9 +5,220 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EDEDED;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Home Styling */
+.home-container {
+  width: 80%;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 507px;
+  height: 40px;
+  border-radius: 13px;
+  padding: 8px 16px;
+  margin: auto;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 100px;
+  padding: 50px 0;
+}
+
+.cart-container {
+  margin-left: 100px;
+}
+
+.cart-main-title {
+  font-size: 48px;
+}
+
+.checkout-container {
+  display: flex;
+  margin: 2%;
+}
+
+.order-summary-main {
+  width: 70%;
+}
+
+.order-summary-main section {
+  margin-bottom: 20px;
+}
+
+.order-summary-card{
+  margin-bottom: 30px;
+}
+
+.order-summary-main h4,
+.order-summary-card h4 {
+  margin: 0;
+}
+
+.review-products-section,
+.shipping-section,
+.payment-section,
+.order-summary-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.order-summary {
+  width: 30%;
+  position: fixed;
+  top: 30px;
+  right: 0;
+}
+
+.payment-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.change-btn {
+  border: 1px #000 solid;
+  border-radius: 5px;
+  text-decoration: none;
+  height: 25px;
+  padding: 8px 16px;
+  margin-top: 30px;
+}
+
+.order-btn {
+  margin: 30px 0;
+  height: 40px;
+  width: 93%;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background-color: black;
+  color: #fff;
+  margin-bottom: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-btn{
+  border: 1px #000 solid;
+  border-radius: 5px;
+  text-decoration: none;
+  height: 25px;
+  padding: 8px 16px;
+  margin-top: 30px;
+  text-align: end;
+}
+
+/* Shipping Styles */
+.shipping-container {
+  background-color: #fff;
+  width: 50%;
+  height: 90%;
+  margin: 50px auto;
+  border-radius: 15px;
+}
+
+.add-address {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-address label {
+  font-size: 19px;
+  padding: 8px 0;
+}
+
+.add-address input {
+  height: 35px;
+  border-radius: 16px;
+  padding: 8px 16px;
+}
+
+.add-address button {
+  margin: 30px 0;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background-color: black;
+  color: #fff;
+}
+
+.shipping-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Payment */
+
+.payment-container {
+  background-color: #fff;
+  width: 50%;
+  height: 90%;
+  margin: 50px auto;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.select-card h4,
+.add-card h4 {
+  font-size: 31px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.add-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-card label {
+  font-size: 19px;
+  padding: 8px 0;
+}
+
+.add-card input {
+  height: 35px;
+  border-radius: 16px;
+  padding: 8px 16px;
+}
+
+.add-card button {
+  margin: 30px 0;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background-color: black;
+  color: #fff;
+}
+
+.expiry-cvc {
+  margin-top: 20px;
+}
+
+.expiry-cvc label {
+  margin-right: 10px;
 }
