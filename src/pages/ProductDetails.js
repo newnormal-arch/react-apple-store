@@ -13,13 +13,14 @@ function ProductDetails() {
             <CartSideBar />
             <div className="productDetail">
                 {productList.map(item => {
-                    if (item.id == params.id) {
+                    if (item.id === parseInt(params.id)) {
                         return (
                             <div key={item.id}>
                                 <ProductDetailsCard data={item} />
                             </div>
                         )
                     }
+                    return null;
                 }
                 )}
             </div>

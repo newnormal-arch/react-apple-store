@@ -1,11 +1,18 @@
 import React from 'react';
 import "./ProductDetailsCard.css";
-// import { useDispatch } from 'react-redux';
-// import { addToCart } from '../redux/cartSlice';
-// import { FaShoppingBag } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/slice/cartSlice';
+import { FaShoppingBag } from "react-icons/fa";
 
 function ProductDetailsCard({data}) {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch()
+    const handleAddToCart = () => {
+        dispatch(addToCart({
+            ...data,
+            quantity: 1
+        }))
+        // alert("Successfully!")
+    }
     return (
         <div className='productDetailsCard'>
             <div className='productDetailsTopSection'>
@@ -16,7 +23,7 @@ function ProductDetailsCard({data}) {
                     {/* <p className='productDetailsRating'>{rating} / 5</p> */}
                     <p className='productDetailsPrice'>R {data.price}</p>
                     {/* <p className='productDetailsDescription'>{description}</p> */}
-                    {/* <button className='bag-btn' onClick={() => dispatch(addToCart({ title, image, id, description, model, rating, price}))}><FaShoppingBag /> Add To Bag</button> */}
+                    <button className='bag-btn' onClick={handleAddToCart}><FaShoppingBag /> Add To Bag</button>
                 </div>
 
             </div>
