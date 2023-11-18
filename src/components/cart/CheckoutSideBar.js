@@ -18,7 +18,7 @@ function CheckoutSideBar() {
                 );
             })}
             </div>
-            <p>Total : {cart?.total}</p>
+            <p>Total : {cart?.total.toFixed(2)}</p>
             <Link to="/checkout" className="cart-btn"><FaShoppingBag /> Checkout</Link>
         </div>
     );

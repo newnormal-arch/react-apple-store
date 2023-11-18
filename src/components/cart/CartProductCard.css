@@ -18,3 +18,26 @@
     text-align: end;
     margin-right: 30px;
 }
+
+.quantity-counter input{
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.quantity-btn {
+    height: 25px;
+    border: none;
+    width: 25px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.remove-btn{
+    background-color: red;
+    border: none;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}

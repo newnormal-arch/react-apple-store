@@ -33,20 +33,20 @@ function CartProductCard({ data }) {
                     <h4>{data.name}</h4>
                     <p>{data.short_description}</p>
                     {/* <p>{description}</p> */}
-                    {/* <p>{rating} / 5</p> */}
+                    <p>{data.rating} / 5</p>
                     <p>$ {data.price}</p>
                 </div>
             </div>
             <div className="quantity-counter">
-                <button onClick={handleRemove}><FaTrashAlt /></button>
-                <p>Total Price: $ {totalPrice}</p>
-                <button onClick={() => {
+                <button className="remove-btn" onClick={handleRemove}><FaTrashAlt /></button>
+                <p>Total Price: $ {totalPrice.toFixed(2)}</p>
+                <button className="quantity-btn" onClick={() => {
                     if (quantity > 1) {
                         setQuantity(pre => pre - 1)
                     }
                 }}>-</button>
                 <input type="number" value={quantity} onChange={handleChange} />
-                <button onClick={() => setQuantity(pre => pre + 1)}>+</button>
+                <button className="quantity-btn" onClick={() => setQuantity(pre => pre + 1)}>+</button>
             </div>
         </div>
     );

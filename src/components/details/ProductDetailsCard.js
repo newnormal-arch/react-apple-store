@@ -20,7 +20,7 @@ function ProductDetailsCard({data}) {
                 <div className='productDetailsTopDescription'>
                     <h5>{data.name}</h5>
                     <p className='productDetailsModel'>{data.short_description}</p>
-                    {/* <p className='productDetailsRating'>{rating} / 5</p> */}
+                    <p className='productDetailsRating'>{data.rating} / 5</p>
                     <p className='productDetailsPrice'>R {data.price}</p>
                     {/* <p className='productDetailsDescription'>{description}</p> */}
                     <button className='bag-btn' onClick={handleAddToCart}><FaShoppingBag /> Add To Bag</button>

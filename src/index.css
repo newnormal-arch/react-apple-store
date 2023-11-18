@@ -223,3 +223,39 @@ code {
 .expiry-cvc label {
   margin-right: 10px;
 }
+
+.success-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  text-align: center;
+}
+
+.success-card i{
+  font-size: 9rem;
+  color: green;
+}
+
+.success-card h2{
+  font-size: 3.2rem;
+}
+
+.success-card p {
+  font-size: 1.6rem;
+}
+
+.success-card .success-btn{
+  background-color: #000;
+  color: #EDEDED;
+  border-radius: 15px;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
