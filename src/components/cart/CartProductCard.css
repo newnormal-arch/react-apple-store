@@ -1,7 +1,20 @@
 .cart-product-card{
     display: flex;
     background-color: #fff;
-    width: 74%;
+    width: 100%;
     border-radius: 15px;
     margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prod-cart-details {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.quantity-counter {
+    text-align: end;
+    margin-right: 30px;
 }
