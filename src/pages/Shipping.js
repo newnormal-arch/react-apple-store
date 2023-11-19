@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { user } from "../data/user";
 
 function Shipping() {
     const userInfo = user[0];
+    const navigate = useNavigate();
 
     const [name, setName] = useState(userInfo.name);
     const [street, setStreet] = useState(userInfo.shippingAddress.street);
@@ -24,7 +25,8 @@ function Shipping() {
             country,
           },
         };
-        localStorage.setItem('user', JSON.stringify(updatedUser));
+        localStorage.setItem('userShippingInfo', JSON.stringify(updatedUser));
+        navigate('/checkout');
       };
 
     return (
@@ -45,7 +47,7 @@ function Shipping() {
                 <label> Country</label>
                 <input placeholder="South Africa" onChange={(e) => setCountry(e.target.value)}></input>
 
-                <button onClick={handleSubmit}><Link className='shipping-btn' to="/checkout">Add Address</Link></button>
+                <button onClick={handleSubmit}>Add Address</button>
                 <div className="shipping-footer">
                     <Link to="/checkout">Back</Link>
                     <p>Secure Connection</p>

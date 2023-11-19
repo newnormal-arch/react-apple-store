@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { user } from "../data/user";
 
 function Payment() {
     const userInfo = user[0];
+    const navigate = useNavigate();
 
     const [cardHolder, setCardHolder] = useState(userInfo.paymentMethod.cardHolder);
     const [cardNumber, setCardNumber] = useState(userInfo.paymentMethod.cardNumber);
@@ -22,7 +23,8 @@ function Payment() {
             cvv,
           },
         };
-        localStorage.setItem('user', JSON.stringify(updatedUser));
+        localStorage.setItem('userPaymentInfo', JSON.stringify(updatedUser));
+        navigate('/checkout');
       };
 
     return (
@@ -48,7 +50,7 @@ function Payment() {
                     <input placeholder="123" onChange={(e) => setCVV(e.target.value)}></input>
                 </div>
 
-                <button onClick={handleSubmit}><Link className="payment-btn" to="/checkout">Add Payment Method</Link></button>
+                <button onClick={handleSubmit}>Add Payment Method</button>
                 <div className="shipping-footer">
                     <Link to="/checkout">Back</Link>
                     <p>Secure Connection</p>
