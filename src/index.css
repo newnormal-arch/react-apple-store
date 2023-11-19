@@ -224,6 +224,11 @@ code {
   margin-right: 10px;
 }
 
+.payment-btn, .shipping-btn {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .success-card {
   display: flex;
   flex-direction: column;
